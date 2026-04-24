@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #2f3747;
+  color: white;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: #0f172a;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* awalnya sembunyi */
+  width: 250px;
+  height: 100%;
+  background-color: #111;
+  padding-top: 20px;
+  transition: 0.3s;
+}
+
+/* Isi menu */
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  margin-left: 200px;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(bg.jpeg);
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* FOTO */
+.profile {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+}
+
+/* Button */
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Skill */
+section {
+  padding: 80px;
+  text-align: center;
+}
+#aboutme{
+  background-color: #0f172a;
+}
+#aboutme p {
+  width: 400px;
+  margin-top: 30px;
+  margin-left: 34%;
+  text-align: center;
+}
+.skills {
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.skill-card {
+  padding-top: 30px;
+}
+.skill-card h3 {
+  font-size: 20px;
+}
+.frontend {
+  display: flex;
+  justify-content: center;
+}
+.htmll {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+  transition: 0.3s;
+  margin-left: 15px;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+.htmll button{
+  background-color: transparent;
+  color: #f0f0f0;
+  padding-left: 102px;
+}
+.hidden{
+  background-color: #181f2c;
+  width: 600px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 255px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.bckend{
+  background-color: #181f2c;
+  width: 600px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 255px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.ui{
+  background-color: #181f2c;
+  width: 600px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 255px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.htmll:hover {
+  transform: scale(1.1);
+}
+
+/* Project */
+.projects {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  width: 250px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 768px) {
+  /* Perkecil tulisan */
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  /* Hero text */
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero h2 {
+    font-size: 16px;
+  }
+
+  .hero p {
+    font-size: 12px;
+  }
+
+  /* Perkecil foto */
+  .profile {
+    width: 60px;
+    height: 60px;
+  }
+
+
+  nav {
+    padding: 15px 20px;
+  }
+
+  .hero {
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+    background-size: cover;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .profile {
+    width: 130px;
+    height: 130px;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+
+  #aboutme p {
+    width: 100%;
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  .frontend {
+    flex-wrap: wrap;
+  }
+
+  .htmll {
+    width: 80px;
+    height: 90px;
+    margin: 10px;
+  }
+
+  .htmll button {
+    padding-left: 0;
+  }
+
+  .hidden,
+  .bckend,
+  .ui {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+
+}

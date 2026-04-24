@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Portofolio Ramdan</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+  <nav>
+    <h2 style="padding-top: 10px;">Ramadan Dev</h2>
+    <ul>
+      <button onclick="openSidebar()">☰ Menu</button>
+    </ul>
+  </nav>
+
+  <div id="sidebar" class="sidebar">
+    <button class="close-btn" onclick="closeSidebar()"><i class="bi bi-x-circle"></i></button>
+    <a href="#">Home</a>
+    <a href="#side2">About Me</a>
+    <a href="#side3">Keahlian</a>
+    <a href="#side4">Project</a>
+    <a href="#side5">Footer</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+
+      <!-- FOTO -->
+      <img src="foto.jpeg" class="profile">
+
+      <div>
+        <h1>Halo, Saya Ramadan</h1>
+        <h2 id="typing"></h2>
+        <p>Siswa RPL yang fokus di Web Development</p>
+        <button onclick="scrollToProject()">Lihat Project</button>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="aboutme">
+    <h1 id="side2" style="padding-top: 100px; text-align: center;">About Me</h1>
+    <p style="font-size: 15px;">Perkenalkan, saya Ramadhan Kaka, seorang siswa jurusan Rekayasa Perangkat Lunak (RPL) yang memiliki ketertarikan besar di dunia teknologi, khususnya dalam pengembangan website dan aplikasi. Saya senang belajar hal baru, mengembangkan kreativitas, serta membangun sistem yang dapat memberikan manfaat bagi banyak orang. Dengan semangat dan dedikasi, saya terus meningkatkan kemampuan dalam coding, desain, dan problem solving.</p>
+  </div>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0f172a" fill-opacity="1" d="M0,256L48,261.3C96,267,192,277,288,240C384,203,480,117,576,122.7C672,128,768,224,864,256C960,288,1056,256,1152,224C1248,192,1344,160,1392,144L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+  <section class="skill">
+    <h1 id="side3">Keahlian Saya</h1>
+
+    <div class="skills">
+
+      <div class="skill-card">
+        <h3>Frontend</h3>
+        <div class="frontend">
+          <div class="htmll">
+            <i style="font-size: 30px;" class="bi bi-filetype-html"></i><br>
+            <h5 style="padding-top: 10px;">HTML</h5>
+            <p style="font-weight: bold; color: rgb(26, 255, 0);">100%</p>
+            <button onclick="ubah('html')"><i class="bi bi-exclamation-circle"></i></button>
+          </div>
+          <div class="htmll">
+            <i style="font-size: 30px;" class="bi bi-filetype-css"></i><br>
+            <h5 style="padding-top: 10px;">CSS</h5>
+            <p style="font-weight: bold; color: rgb(26, 255, 0);">100%</p>
+            <button onclick="ubah('css')"><i class="bi bi-exclamation-circle"></i></button>
+          </div>
+          <div class="htmll">
+            <i style="font-size: 30px;" class="bi bi-filetype-js"></i><br>
+            <h5 style="padding-top: 10px;">JavaScript</h5>
+            <p style="font-weight: bold; color: rgb(255, 166, 0);">80%</p>
+            <button onclick="ubah('js')"><i class="bi bi-exclamation-circle"></i></button>
+          </div>
+          <div class="htmll">
+            <i style="font-size: 30px;" class="bi bi-bootstrap"></i><br>
+            <h5 style="padding-top: 10px;">Bootstrap</h5>
+            <p style="font-weight: bold; color: rgb(26, 255, 0);">100%</p>
+            <button onclick="ubah('bst')"><i class="bi bi-exclamation-circle"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div id="output" class="hidden">
+        <p></p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Backend</h3>
+        <div class="frontend">
+          <div class="htmll">
+            <i style="font-size: 30px;" class="bi bi-filetype-sql"></i><br>
+            <h5 style="padding-top: 10px;">MySql</h5>
+            <p style="font-weight: bold; color: rgb(26, 255, 0);">100%</p>
+            <button onclick="ubah1('sql')"><i class="bi bi-exclamation-circle"></i></button>
+          </div>
+          <div class="htmll">
+            <i style="font-size: 30px;" class="bi bi-filetype-php"></i><br>
+            <h5 style="padding-top: 10px;">PHP</h5>
+            <p style="font-weight: bold; color: rgb(226, 246, 5);">90%</p>
+            <button onclick="ubah1('php')"><i class="bi bi-exclamation-circle"></i></button>
+          </div>
+          <div class="htmll">
+            <i style="font-size: 30px;" class="bi bi-leaf"></i><br>
+            <h5 style="padding-top: 10px;">MonggoDB</h5>
+            <p style="font-weight: bold; color: rgb(255, 166, 0);">80%</p>
+            <button onclick="ubah1('mdb')"><i class="bi bi-exclamation-circle"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div id="output1" class="bckend">
+        <p></p>
+      </div>
+
+      <div class="skill-card">
+        <h3>UI Design</h3>
+        <div class="frontend">
+          <div class="htmll">
+            <i style="font-size: 30px;" class="bi bi-browser-edge"></i><br>
+            <h5 style="padding-top: 10px;">Canva</h5>
+            <p style="font-weight: bold; color: rgb(26, 255, 0);">100%</p>
+            <button onclick="ubah2('cnv')"><i class="bi bi-exclamation-circle"></i></button>
+          </div>
+          <div class="htmll">
+            <i style="font-size: 30px;" class="bi bi-currency-pound"></i><br>
+            <h5 style="padding-top: 10px;">Figma</h5>
+            <p style="font-weight: bold; color: rgb(136, 255, 0);">90%</p>
+            <button onclick="ubah2('fma')"><i class="bi bi-exclamation-circle"></i></button>
+          </div>
+        </div>
+      </div>
+      <div id="output3" class="ui">
+        <p></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Project -->
+  <section id="project">
+    <h2>Project Saya</h2>
+
+    <div class="projects">
+
+      <div class="card">
+        <h3>BMI Scanner</h3>
+        <p style="padding-top: 10px;">WEB Untuk Mengecek BMI dan Cek Kesehatan</p>
+        <a href="Healt-ceaker/healt.html"><button>View</button></a>
+      </div>
+
+      <div class="card">
+        <h3>HayBird</h3>
+        <p>Sebuah Game Ciptan Saya (Masih Ada BUG)</p>
+        <a href="https://constructkaka.netlify.app/"><button>View</button></a>
+      </div>
+
+    </div>
+  </section>
+  <footer style="background-color: #0f172a;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2f3747" fill-opacity="1" d="M0,224L34.3,202.7C68.6,181,137,139,206,138.7C274.3,139,343,181,411,202.7C480,224,549,224,617,213.3C685.7,203,754,181,823,149.3C891.4,117,960,75,1029,69.3C1097.1,64,1166,96,1234,117.3C1302.9,139,1371,149,1406,154.7L1440,160L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path></svg>
+    <p style="text-align: right; padding-top: 30px; padding-bottom: 10px;">© Created By: Ramadhan Kaka Pratama</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
